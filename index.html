@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvra Discord Bot - Legal Documents</title>
+    <meta name="description" content="Velvra Discord Bot's legal documents - Privacy Policy, Terms of Service, and Cookies Policy">
+    <meta name="keywords" content="Velvra, Discord bot, privacy policy, terms of service, cookies policy, legal documents">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: var(--bg-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(123, 63, 228, 0.1);
+        }
+
+        .card h2 {
+            color: var(--velvra-primary);
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--velvra-primary);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: var(--velvra-secondary);
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .welcome-section h1 {
+            color: var(--velvra-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-section p {
+            color: var(--text-dark);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="#" class="logo">Velvra</a>
+            <div class="nav-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookies Policy</a>
+                <a href="mailto:contact@creativeframework.site">Contact</a>
+            </div>
+            <div class="language-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- English Content -->
+            <div class="content-en">
+                <div class="welcome-section">
+                    <h1>Velvra Legal Documents</h1>
+                    <p>Welcome to Velvra's legal documentation center. Here you can find all the important information about how we handle your data and our terms of service.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h2>Privacy Policy</h2>
+                        <p>Learn about how we collect, use, and protect your personal information.</p>
+                        <a href="privacy.html" class="card-button">Read More</a>
+                    </div>
+                    <div class="card">
+                        <h2>Terms of Service</h2>
+                        <p>Review our terms and conditions for using the Velvra Discord bot.</p>
+                        <a href="terms.html" class="card-button">Read More</a>
+                    </div>
+                    <div class="card">
+                        <h2>Cookies Policy</h2>
+                        <p>Understand how we use cookies to improve your experience.</p>
+                        <a href="cookies.html" class="card-button">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arabic Content -->
+            <div class="content-ar">
+                <div class="welcome-section">
+                    <h1>المستندات القانونية لـ Velvra</h1>
+                    <p>مرحباً بك في مركز الوثائق القانونية لـ Velvra. هنا يمكنك العثور على جميع المعلومات المهمة حول كيفية التعامل مع بياناتك وشروط خدمتنا.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h2>سياسة الخصوصية</h2>
+                        <p>تعرف على كيفية جمع واستخدام وحماية معلوماتك الشخصية.</p>
+                        <a href="privacy.html" class="card-button">اقرأ المزيد</a>
+                    </div>
+                    <div class="card">
+                        <h2>شروط الخدمة</h2>
+                        <p>راجع شروط وأحكام استخدام بوت Velvra Discord.</p>
+                        <a href="terms.html" class="card-button">اقرأ المزيد</a>
+                    </div>
+                    <div class="card">
+                        <h2>سياسة ملفات تعريف الارتباط</h2>
+                        <p>افهم كيف نستخدم ملفات تعريف الارتباط لتحسين تجربتك.</p>
+                        <a href="cookies.html" class="card-button">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Velvra by Creative Framework. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
