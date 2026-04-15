@@ -5,191 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Velvra | Legal Documentation</title>
-    <meta name="description"
-        content="Velvra Discord Bot's legal documents - Privacy Policy, Terms of Service, and Cookies Policy">
-    <meta name="keywords"
-        content="Velvra, Discord bot, privacy policy, terms of service, cookies policy, legal documents">
+    <meta name="description" content="Velvra Discord Bot's legal documents - Privacy Policy, Terms of Service, and Cookies Policy">
+    <meta name="keywords" content="Velvra, Discord bot, privacy policy, terms of service, cookies policy, legal documents">
 
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Marked.js for parsing markdown in the browser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="navbar-container container">
-            <a href="index.html" class="logo">Velvra</a>
+        <div class="navbar-container">
+            <a href="#home" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="logo-icon">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                    <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Velvra Docs
+            </a>
             <div class="nav-links">
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-                <a href="cookies.html">Cookies</a>
-                <a href="mailto:contact@creativeframework.site">Contact</a>
+                <div class="language-switcher">
+                    <select id="languageSelect" class="lang-select">
+                        <option value="en">English</option>
+                        <option value="ar">العربية</option>
+                        <option value="ja">日本語</option>
+                        <option value="ru">Русский</option>
+                        <option value="de">Deutsch</option>
+                        <option value="sv">Svenska</option>
+                    </select>
+                </div>
+                <a href="https://discord.gg/qccq2mMgaT" target="_blank" class="nav-button discord-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+                    Join Support Server
+                </a>
             </div>
-            <div class="language-switcher">
-                <select id="language-select">
-                    <option value="en">English</option>
-                    <option value="ar">العربية</option>
-                </select>
-            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </nav>
 
-    <main class="main-content">
-        <div class="container">
-            <!-- English Content -->
-            <div class="content-en">
-                <div class="welcome-section">
-                    <h1>Legal Documentation</h1>
-                    <p>Trust and transparency are at the core of Velvra. Our legal documents outline our commitment to
-                        your privacy and the terms governing our services.</p>
+    <div class="docs-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title" id="nav-getting-started">Getting Started</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#home" class="nav-item" data-target="home" id="nav-intro">Introduction</a></li>
+                    </ul>
                 </div>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <h2>Privacy Policy</h2>
-                            <p>How we collect, use, and protect your personal information while using Velvra.</p>
-                        </div>
-                        <a href="privacy.html" class="card-button">View Policy</a>
-                    </div>
-
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                            </div>
-                            <h2>Terms of Service</h2>
-                            <p>The rules, requirements, and legal agreements for using the Velvra Discord bot.</p>
-                        </div>
-                        <a href="terms.html" class="card-button">View Terms</a>
-                    </div>
-
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                                    <path d="M8.5 8.5v.01"></path>
-                                    <path d="M16 15.5v.01"></path>
-                                    <path d="M12 12v.01"></path>
-                                    <path d="M11 17v.01"></path>
-                                    <path d="M7 14v.01"></path>
-                                </svg>
-                            </div>
-                            <h2>Cookies Policy</h2>
-                            <p>Information about how we use cookies and tracking to improve your user experience.</p>
-                        </div>
-                        <a href="cookies.html" class="card-button">View Policy</a>
-                    </div>
-                </div>
-
-                <div class="discord-widget">
-                    <h2>Join Our Community</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">Get real-time updates and support from
-                        our growing community of users.</p>
-                    <iframe src="https://discord.com/widget?id=1369763488133812346&theme=dark" width="350" height="500"
-                        allowtransparency="true" frameborder="0"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title" id="nav-legal">Legal Documents</h3>
+                    <ul class="sidebar-nav">
+                        <li><a href="#privacy" class="nav-item" data-target="privacy" id="nav-privacy">Privacy Policy</a></li>
+                        <li><a href="#terms" class="nav-item" data-target="terms" id="nav-terms">Terms of Service</a></li>
+                        <li><a href="#cookies" class="nav-item" data-target="cookies" id="nav-cookies">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
+        </aside>
 
-            <!-- Arabic Content -->
-            <div class="content-ar">
-                <div class="welcome-section">
-                    <h1>المستندات القانونية</h1>
-                    <p>الثقة والشفافية في صميم Velvra. توضح مستنداتنا القانونية التزامنا بخصوصيتك والشروط التي تحكم
-                        خدماتنا.</p>
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <div id="loader" class="loader">
+                    <div class="spinner"></div>
                 </div>
-
-                <div class="card-grid">
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                </svg>
-                            </div>
-                            <h2>سياسة الخصوصية</h2>
-                            <p>كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتك الشخصية أثناء استخدام Velvra.</p>
-                        </div>
-                        <a href="privacy.html" class="card-button">عرض السياسة</a>
-                    </div>
-
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                            </div>
-                            <h2>شروط الخدمة</h2>
-                            <p>القواعد والمتطلبات والاتفاقيات القانونية لاستخدام بوت Velvra Discord.</p>
-                        </div>
-                        <a href="terms.html" class="card-button">عرض الشروط</a>
-                    </div>
-
-                    <div class="card">
-                        <div>
-                            <div class="icon-wrap" style="color: var(--velvra-primary); margin-bottom: 1.5rem;">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"></path>
-                                    <path d="M8.5 8.5v.01"></path>
-                                    <path d="M16 15.5v.01"></path>
-                                    <path d="M12 12v.01"></path>
-                                    <path d="M11 17v.01"></path>
-                                    <path d="M7 14v.01"></path>
-                                </svg>
-                            </div>
-                            <h2>سياسة ملفات تعريف الارتباط</h2>
-                            <p>معلومات حول كيفية استخدامنا لملفات تعريف الارتباط والتتبع لتحسين تجربة المستخدم.</p>
-                        </div>
-                        <a href="cookies.html" class="card-button">عرض السياسة</a>
-                    </div>
+                
+                <div id="markdown-content" class="markdown-body">
+                    <!-- Markdown gets compiled and injected here -->
                 </div>
-
-                <div class="discord-widget">
-                    <h2>انضم إلى مجتمعنا</h2>
-                    <p style="margin-bottom: 2rem; color: var(--text-secondary);">احصل على تحديثات ودعم فوري من مجتمع
-                        المستخدمين المتنامي لدينا.</p>
-                    <iframe src="https://discord.com/widget?id=1341540133685559411&theme=dark" width="350" height="500"
-                        allowtransparency="true" frameborder="0"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
-                    </iframe>
+                
+                <div class="docs-footer">
+                    <p>Contact us at our Discord <a href="https://discord.gg/qccq2mMgaT">Support Server</a></p>
+                    <p class="copyright">© 2026 Velvra | Creative Framework</p>
                 </div>
             </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2025 Velvra | Creative Framework. Crafted with passion.</p>
-        </div>
-    </footer>
+            
+            <!-- Table of contents mapped from H2/H3 dynamically -->
+            <aside class="toc" id="toc">
+                <h4 class="toc-title">On this page</h4>
+                <ul id="toc-list">
+                    <!-- Dynamic Outline -->
+                </ul>
+            </aside>
+        </main>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
